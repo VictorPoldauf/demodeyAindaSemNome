@@ -1,0 +1,509 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*---------------------------------------------
+  ESTRUTURA
+  --------------------------------------------*/
+/*
+
+
+FIRSTHAND----------------- '2'
+
+  -----FONTES - @font-face '44'
+  -----QUERIES - @media    '67'
+  
+CODE---------------------- '94'
+
+
+Main
+  -----MAIN CODE - .main--wrap '99' 
+    Aqui ficam todos o CSS voltado pras tags
+    gerais e formulários.
+
+  -----SECTION 1 - .section1--hello '149' 
+    Aqui fica o CSS da página inicial
+
+  -----SECTION 2 - .section2--login1 '185' 
+    Aqui fica o CSS do formulário de nome, idade
+    gênero e grupo étnico
+
+  -----SECTION 3 - .section3--information '245' 
+    Aqui fica o CSS do email e os botões pra pular
+    ou continuar o preenchimento dos dados.
+
+  -----SECTION 4 - .section4--preencher '378' 
+    Aqui fica o CSS do CPF e da foto
+
+  -----SECTION 5 - .section5--finalizar '467' 
+    Aqui fica o CSS da orientação sexual, agradecimento
+    e nota final.
+
+Footer
+  -----
+
+
+
+
+  
+/*----------------------------------------------
+  FONTES
+  ---------------------------------------------*/
+
+@font-face{ /*Fonte h1*/
+  font-family: h1-font;
+  src:url('../fonts/sans-lato/Lato-Bold.ttf');
+  font-weight: bold;
+  font-size: 3.2em;
+}
+
+@font-face{ /*Fonte h2*/
+  font-family: h2-font;
+  src:url('../fonts/sans-lato/Lato-Regular.ttf');
+  font-size: 1.7em;
+}
+
+@font-face{ /*Fonte p*/
+  font-family: p-font;
+  src:url('../fonts/serif-merriweather/Merriweather-Regular.ttf');
+  font-size: 1.1em;
+}
+
+/*-----------------------------------------------
+  QUERIES
+  -----------------------------------------------*/
+  
+  /* Portrait and Landscape */
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  }
+  
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    
+  }
+  
+  
+  /*-----------------------------------------------
+    CODE
+    -----------------------------------------------*/
+  
+  
+  /*-----------------------------------------------
+  MAIN CODE
+  -----------------------------------------------*/
+  
+  
+.main--wrap{
+  height:100vh;
+  /*overflow:hidden; A rolagem vai acontecer c/ javascript*/
+  display: flex;
+  flex-flow:column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  width:100vw;
+  height:100vh;
+  background: linear-gradient(190deg, rgba(55,82,179,1) 0%, rgba(87,53,150,1) 100%);
+  padding:15px;
+  position: relative;
+}
+
+button{
+  height:40px;
+  padding:0 15px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(to left top, #9469c4, #a355af);
+  font-family: p-font,sans-serif;
+  color:white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+p{
+  font-display: p-font;
+  color:white;
+  font-size: 1.4em;
+  padding:5px;
+}
+
+button:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.wrap--dot__section{
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  flex-flow:row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height:10px;
+  width:20vw;
+}
+.dot--section{
+  background: white;
+  border-radius: 50%;
+  height:8px;
+  width:8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.dot--section__selected{
+  background: #9469c4;
+  border-radius: 50%;
+  height:12px;
+  width:12px;
+  transition:1s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+input[type=text], input[type=email], input{
+  border:none;
+  background:transparent;
+  width:80vw;
+  border-bottom: 1px solid rgba(248, 248, 248, 0.877);
+  font-family: p-font;
+  font-size:1.4em;
+  color:white;
+}
+
+input[type=text], input[type=email]::placeholder{
+  color:rgba(248, 248, 248, 0.67);
+}
+
+input[type=radio]{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 0;
+  width:0;
+  cursor:pointer;
+}
+
+.form--radio__custom{
+  height: 15px;
+  width: 15px;
+  border:2px solid white;
+}
+
+.form__genero_div .form__genero ~ .form--radio__custom:hover {
+  border:2px solid white;
+  transform: scale(1.3,1.3) rotateZ(190deg);
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.form__genero_div .form__genero ~ .form--radio__custom:checked {
+  background-color: #7147a0;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+input[type=text]::placeholder{
+  color: rgba(255, 255, 255, 0.4);
+  /* padding-left:50px;
+  opacity: 0; */
+  animation:input--placeholder__animation 1s alternate forwards ease-in-out;
+}
+
+@keyframes input--placeholder__animation{
+  from{padding-left:50px;opacity:0;}
+  to{padding-left:0;opacity:1;}
+}
+
+/*-----------------------------------------------
+SECTION 1
+-----------------------------------------------*/
+.section1--hello{
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.front--button{
+  position: absolute;
+  bottom:40px;  
+  transform: translate(0,60px) rotate(6deg);
+  opacity: 0;
+  animation:button__animation 1.4s alternate forwards ease-in-out 2s;
+}
+
+.front--button__click{
+  transform: translate(0px) rotate(0deg);
+  animation:button__animation__click 1s alternate forwards ease-in-out;
+}
+
+@keyframes button__animation{
+  from{transform: translate(0,60px)rotate(6deg);opacity:0;}
+  to{transform: translate(0,0px) rotate(0deg);opacity:1;}
+}
+
+@keyframes button__animation__click{
+  0%{transform: translate(0,0px) rotate(0deg);opacity:1;}
+  20%{transform: translate(0,-5px) rotate(3deg);opacity:1;}
+  50%{transform: translate(0,20px) rotate(5deg);opacity:0.7;}
+  75%{transform: translate(0,40px) rotate(7deg);opacity:0.4;}
+  100%{transform: translate(0,60px) rotate(10deg);opacity:0;}
+}
+/*-----------------------------------------------
+SECTION 2
+-----------------------------------------------*/
+.section2--login1{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.login1__bold{
+  font-weight: 600;
+}
+
+.login1--h1{
+  font-family:h1-font, sans-serif;
+  font-size: 3.8em;
+  color:white;
+  text-align: center;
+  display: unset;
+  transform:translate(-330px);
+  opacity: 0;
+  animation: login1--h1__animation 0.7s alternate forwards ease-in-out;  
+}
+
+@keyframes login1--h1__animation{
+  from{transform:translate(-330px);opacity:0;}
+  to{transform:translate(0px);opacity:1;}
+}
+
+.login1--p1{
+  font-display: p-font;
+  color:white;
+  font-size: 1.4em;
+  padding:15px;
+  display: unset;
+}
+
+.login1--p2{
+  font-display: p-font;
+  color:white;
+  font-size: 1.4em;
+  padding:15px;
+  display: none;
+}
+.login1--form__genero{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  width:100vw;
+  color: white;
+  font-family: p-font, sans-serif;
+  font-size:1.2em;
+}
+.form__genero_div{
+  display: flex;
+  flex-flow:row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right:5px;
+}
+
+.form__genero_div p{
+  margin-left:7px;
+  width:65px;
+  font-size: 1.2em;
+}
+
+.login1--p3{
+  font-display: p-font;
+  color:white;
+  font-size: 1.4em;
+  padding:15px;
+  display: unset;
+}
+
+.login1--button__next__animation{
+  transform: translate(0,60px) rotate(6deg);
+  opacity: 0;
+  animation:button__animation 1.4s alternate forwards ease-in-out 2s; 
+}
+
+/*-----------------------------------------------
+SECTION 3
+-----------------------------------------------*/
+.section3--information{
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: flex-start;
+  text-align:left;
+  align-items: center;
+}
+
+.login1--p4{
+  display: unset;
+}
+
+.login1--p5{
+  display: unset;
+}
+
+.login1--p6{
+  display: unset;
+}
+
+.button--wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow:row wrap;
+  width:100vw;
+  margin:20px 0;
+}
+
+.login1--button__dados, .login1--button__saber-mais{
+  margin:12px 0px;
+}
+
+/*-----------------------------------------------
+SECTION 4
+-----------------------------------------------*/
+.section4--preencher{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: flex-start;
+  text-align:left;
+  align-items: center;
+  height:100vh;
+}
+
+.login2--p1__ok{
+  font-size: 4em;
+  font-weight: 600;
+  color:rgba(248, 248, 248, 0.95);
+  display: unset;
+  opacity: 0;
+}
+
+.login2--p1__ok_animation{
+  font-size: 4em;
+  font-weight: 600;
+  color:rgba(248, 248, 248, 0.95);
+  display: unset;
+  transform: translate(0,0) rotate(3deg);
+  opacity: 0;
+  animation:p1__ok_animation 0.7s forwards alternate 0.4s ease-in-out;
+}
+
+@keyframes p1__ok_animation{
+  0%{transform: translate(0,0) rotate(3deg);opacity: 0;}
+    100%{transform: translate(0,-80px) rotate(0deg);opacity:1;}
+}
+
+.login2--p2{
+  display: none;
+}
+
+.login2--p3{
+  display: unset;
+}
+
+.login2--wrapper__photo-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  margin-top:20px;
+}
+
+.photo-icon__box{
+  width:140px;
+  height:140px;
+  border:1px solid rgba(248, 248, 248, 0.877);
+  position: relative;
+  border-radius: 15px;
+  transition: 1s;
+}
+
+.photo-icon__box:hover{
+  border-radius: 50%;
+}
+
+.photo-icon__vert, .photo-icon__hor{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-25px;
+  height:2px;
+  width:50px;
+  border:2px solid rgba(248, 248, 248, 0.577);
+}
+
+.photo-icon__plus{
+  transition: 1s;
+  width:inherit;
+  height: inherit;
+}
+
+.photo-icon__plus:hover{
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+
+.photo-icon__vert{
+  transform: rotate(90deg);
+}
+
+/*-----------------------------------------------
+SECTION 5
+-----------------------------------------------*/
+.section5--finalizar{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: flex-start;
+  text-align:left;
+  align-items: center;
+  height:100vh;
+}
+
+.login2--p4{
+  display: unset;
+}
+
+.login2--form__orient{
+  display: unset;
+}
+
+.login2--p5{
+  display: unset;
+}
+
+.login2--final{
+  display: unset;
+}
+
+.login2--heart{
+  display: unset;
+}

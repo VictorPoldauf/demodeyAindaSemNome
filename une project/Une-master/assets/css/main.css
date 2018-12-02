@@ -1,0 +1,124 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*---------------------------------------------
+  ESTRUTURA
+  --------------------------------------------*/
+/*
+
+
+FIRSTHAND----------------- '40'
+
+  -----FONTES - @font-face '44'
+  -----QUERIES - @media    '67'
+  
+CODE---------------------- '94'
+
+Body
+  -----
+
+Header
+  -----
+
+
+Main
+  -----
+
+
+Footer
+  -----
+
+
+
+
+  
+/*----------------------------------------------
+  FONTES
+  ---------------------------------------------*/
+
+@font-face{ /*Fonte h1*/
+  font-family: h1-font;
+  src:url('../fonts/sans-lato/Lato-Bold.ttf');
+  font-weight: bold;
+  font-size: 3.2em;
+}
+
+@font-face{ /*Fonte h2*/
+  font-family: h2-font;
+  src:url('../fonts/sans-lato/Lato-Regular.ttf');
+  font-size: 1.7em;
+}
+
+@font-face{ /*Fonte p*/
+  font-family: p-font;
+  src:url('../fonts/serif-merriweather/Merriweather-Regular.ttf');
+  font-size: 1.1em;
+}
+
+/*-----------------------------------------------
+  QUERIES
+  -----------------------------------------------*/
+  
+  /* Portrait and Landscape */
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  }
+  
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    
+  }
+  
+  
+  /*-----------------------------------------------
+    CODE
+    -----------------------------------------------*/
+
+
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:100vh;
+  background-image: linear-gradient(to left bottom, #5c9ae8, #6f8be0, #837bd4, #9469c4, #a355af)
+}
+
+button{
+ background:rgb(250,250,250);
+ border: none;
+ border-radius:10px;
+ height:60px;
+ width: 140px;
+ font-family: h2-font;
+ font-size: 1.4em;
+ color:rgb(50,50,50);
+}
+
+
+.bg_1{
+  background-image: linear-gradient(to right top, #560073, #573596, #5659b5, #567ad0, #5d9ae8);
+}
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="xxxxx é um aplicativo de segurança publica.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ---------- Folha de estilos Oficial----------- -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- ---------------Script Oficial----------------- -->
+    <script src="assets/script/script.js" defer></script>
+    <title>Demoday</title>
+</head>
+<body>
+    
+<main class="main--wrap">
+    
+    <!-- SECTION 1 -->
+    <section class="section1--hello">
+        <img src="" alt="" class="logo--front">
+        <button class="front--button">Vamos começar?</button>
+    </section>
+    
+    <!-- SECTION 2 -->
+    <section class="section2--login1">
+        <h1 class="login1--h1">Olá, qual o seu nome?</h1>
+
+        <form action="" class="login1--form__nome">
+            <input type="text" class="form__nome" name="nome" placeholder="Ex: Iraci" min="3" max="60">
+        </form>
+
+        <p class="login1--p1">
+            Oi, <span class="nome"></span> eu me chamo Une e estou aqui pra te ajudar. Eu nasci há pouco
+            tempo e ainda estou aprendendo algumas coisas. E você, <span class="login1__bold">quando nasceu?</span>
+        </p>
+        <p class="login1--p2">
+            Legal, <span class="idade"></span>anos! Aposto que também aprende muita coisa, certo? E, não que
+            isso seja importante, mas quando você nasceu o médico disse que você era
+            <span class="login1__bold">menino ou menina?</span>
+            
+            <form action="" class="login1--form__genero">
+                <div class="form__genero_div">
+                    <input type="radio" class="form__genero" name="genero" value="menino"><span class="form--radio__custom"></span> <p>Menino</p>
+                </div>
+                <div class="form__genero_div">
+                    <input type="radio" class="form__genero" name="genero" value="menina"><span class="form--radio__custom"></span><p>Menina</p>
+                </div>
+            </form>
+        </p>
+        <p class="login1--p3">
+            E você se vê pertencente à qual <span class="login1__bold">grupo étnico?</span>
+        </p>
+        
+        <form action="" class="login2--form__etnia">
+            <input type="text" class="form__etnia" name="etnia" placeholder="Negro">
+        </form>
+        
+        <button class="login1--button__next">Próximo</button>
+        
+        <div class="wrap--dot__section">
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+        </div>
+    </section>
+    
+    <!-- SECTION 3 -->
+    <section class="section3--information">
+        <p class="login1--p4">
+            <img src="" alt="" class="login1--info1"><!--icone-->
+            Você sabia que os assédios mais graves em 2018 aconteceram com jovens de
+            16 a 24 anos, sendo a maior parte com mulheres negras? Mas o meu objetivo
+            é mudar esses números e tentar evitar que isso aconteça com você.
+        </p>
+        <p class="login1--p5">
+            Agora, <span class="login1__bold">me informa o seu email?</span>  Ele vai me ajudar a te reconhecer quando você
+            for entrar no app.
+        </p>
+        <form action="" method="get" class="login1--form__email">
+            <input type="email" name="email" placeholder="exemplo@mail.com" id="" class="form__email">
+        </form>
+        
+        <div class="button--wrapper">
+            <button class="login1--button__dados">Quero preencher meus dados</button>
+            <button class="login1--button__saber-mais">Quero saber mais sobre você</button>
+        </div>
+        <div class="wrap--dot__section">
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+        </div>
+    </section>
+    
+    <!-- SECTION 4 -->
+    <section class="section4--preencher">
+        <p class="login2--p1__ok">Ok!</p>
+        <p class="login2--p2">
+            Ok. Bom, para a nossa próxima etapa, <span class="login1__bold"> pode me informar o seu CPF?</span>
+            Calma, nós pedimos isso para todos que querem andar com a gente
+            e seus dados estão completamente seguros. Seu CPF não será exposto para ninguém. ;)
+        </p>
+        <form action="" class="login2--form__cpf">
+            <input type="text" class="form__cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" min="11" max="11">
+        </form>
+        <p class="login2--p3">
+            Agora, eu preciso que <span class="login1__bold"> você tire uma foto do seu documento e uma foto com
+            ele em mãos.</span> É assim que nós comprovamos que você é realmente você.
+            Essas fotos também irão diretamente para o nosso banco de dados, 
+            então nem precisa passar perfume pra isso. 
+        </p>
+        <div class="login2--wrapper__photo-icon">
+            <span class="photo-icon__box">
+                <div class="photo-icon__plus">
+                    <span class="photo-icon__vert"></span>
+                    <span class="photo-icon__hor"></span>
+                </div>
+            </span>
+        </div>
+        <div class="wrap--dot__section">
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+        </div>
+    </section>
+    
+    
+    <!-- SECTION 5 -->
+    <section class="section5--finalizar">
+        <p class="login2--p4">
+            Pra terminar, você já me contou que o médico disse que você é
+            <span class="genero"></span> mas agora, eu gostaria de saber, <span class="login1__bold"> qual a sua orientação
+                    sexual? </span>Eu preciso desta informação porque assim eu consigo
+            te manter ainda mais segur <span class="genero_txt"></span>.
+        </p>
+        <form action="" class="login2--form__orient">
+            <input type="text" class="form__orient" name="orientação-sexual" placeholder="Heterossexual">
+        </form>
+        <p class="login2--p5">
+            Entendido. <span class="nome"></span>, agradeço muito por compartilhar suas informações
+            comigo e confiar em mim. Eu sei que essa não é uma tarefa fácil. 
+            Mas vou fazer de tudo para que valha a pena.
+        </p>
+        <p class="login2--final">
+            Vamos trabalhar juntos para ficarmos cada vez mais seguros
+        </p>   
+        <img src="" alt="" class="login2--heart">
+
+        <div class="wrap--dot__section">
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+            <span class="dot--section"></span>
+        </div>
+    </section>  
+    
+</main>
+
+    
+</body>
+</html>
