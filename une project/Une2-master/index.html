@@ -16,16 +16,16 @@
 <main class="main--wrap">
     
     <!-- SECTION 1 -->
-    <section id="hello" class="section1--hello">
+    <section class="section1--hello">
         <img src="" alt="" class="logo--front">
         <div class="section1--button_wrap">
             <button class="front--button1">Login</button>
-            <button onclick="nextToSingUp()" class="front--button2">Cadastre-se</button>
+            <button class="front--button2">Cadastre-se</button>
         </div>
     </section>
     
     <!-- SECTION 2 -->
-    <section id="paginacadastro1" class="section2--login1">
+    <section class="section2--login1">
         <h1 class="login1--h1">Olá, qual o seu nome?</h1>
 
         <form action="" class="login1--form__nome">
@@ -36,7 +36,6 @@
             Oi, <span class="nome"></span> eu me chamo Une e estou aqui pra te ajudar. Eu nasci há pouco
             tempo e ainda estou aprendendo algumas coisas. E você, <span class="login1__bold">quando nasceu?</span>
         </p>
-        <input id="date" type="date">
         <p class="login1--p2">
             Legal, <span class="idade"></span>anos! Aposto que também aprende muita coisa, certo? E, não que
             isso seja importante, mas quando você nasceu o médico disse que você era
@@ -44,7 +43,7 @@
             
             <form action="" class="login1--form__genero">
                 <div class="form__genero_div">
-                    <input  type="radio" class="form__genero" name="genero" value="menino"><span class="form--radio__custom"></span> <p>Menino</p>
+                    <input type="radio" class="form__genero" name="genero" value="menino"><span class="form--radio__custom"></span> <p>Menino</p>
                 </div>
                 <div class="form__genero_div">
                     <input type="radio" class="form__genero" name="genero" value="menina"><span class="form--radio__custom"></span><p>Menina</p>
@@ -59,7 +58,7 @@
             <input type="text" class="form__etnia" name="etnia" placeholder="Negro">
         </form>
         
-        <button onclick="nextToSingUp2()" class="login1--button__next">Próximo</button>
+        <button class="login1--button__next">Próximo</button>
         
         <div class="wrap--dot__section">
             <span class="dot--section"></span>
@@ -70,7 +69,7 @@
     </section>
     
     <!-- SECTION 3 -->
-    <section id='paginacadastro2' class="section3--information">
+    <section class="section3--information">
         <p class="login1--p4">
             <img src="" alt="" class="login1--info1"><!--icone-->
             Você sabia que os assédios mais graves em 2018 aconteceram com jovens de
@@ -86,8 +85,8 @@
         </form>
         
         <div class="button--wrapper">
-            <button onclick="nextToSingUp3()" class="login1--button__dados">Quero preencher meus dados</button>
-            <button class="login1--button__saber-mais">Quero saber mais sobre você</button>
+            <button class="login1--button__dados">Quero preencher meus dados</button>
+            <button class="login1--button__saber-mais">Quero continuar conversando</button>
         </div>
         <div class="wrap--dot__section">
             <span class="dot--section"></span>
@@ -98,7 +97,7 @@
     </section>
     
     <!-- SECTION 4 -->
-    <section id='paginacadastro3' class="section4--preencher">
+    <section class="section4--preencher">
         <p class="login2--p1__ok">Ok!</p>
         <p class="login2--p2">
             Ok. Bom, para a nossa próxima etapa, <span class="login1__bold"> pode me informar o seu CPF?</span>
@@ -122,7 +121,6 @@
                 </div>
             </span>
         </div>
-        <button onclick="nextToSingUp4()" >Proximo</button>
         <div class="wrap--dot__section">
             <span class="dot--section"></span>
             <span class="dot--section"></span>
@@ -133,7 +131,7 @@
     
     
     <!-- SECTION 5 -->
-    <section id='paginacadastro4' class="section5--finalizar">
+    <section class="section5--finalizar">
         <p class="login2--p4">
             Pra terminar, você já me contou que o médico disse que você é
             <span class="genero"></span> mas agora, eu gostaria de saber, <span class="login1__bold"> qual a sua orientação
@@ -152,7 +150,7 @@
             Vamos trabalhar juntos para ficarmos cada vez mais seguros
         </p>   
         <img src="" alt="" class="login2--heart">
-        <button onclick="goToLoad()">Borá lá</button>
+
         <div class="wrap--dot__section">
             <span class="dot--section"></span>
             <span class="dot--section"></span>
@@ -161,11 +159,11 @@
         </div>
     </section> 
     
-    <section id="load" class="section6--loading">        
+    <section class="section6--loading">        
         <img src="assets/img/une-blue.png" alt="" class="section6--logo__floating">
     </section>
 
-    <section id="home" class="section7--main_gui">        
+    <section class="section7--main_gui">        
         <div class="header--une">
             <div class="header--hamburger">
                 <span class="hamburger1"></span>
@@ -189,9 +187,9 @@
                 <p class="card--text">Lorem ipsum dolor ipsum dolor sit amet consectetur adipisicing elit. Temporibus, laboriosam? adipisicing elit. Vero, magni!</p>
         </div>
 
-        <i  onclick="goToMap()" class='map--icon'></i>
+        <i class='map--icon'></i>
     </section>
-    <section id="map" class="section8--map">
+    <section class="section8--map">
         <img src="assets/img/map.jpg" alt="" class="map--image">
         
         <div class="header--hamburger1">
@@ -199,6 +197,7 @@
                 <span class="hamburger2"></span>
                 <span class="hamburger3"></span>
         </div>
+        <img src="assets/img/group.svg" alt="" class="map--join__icon">
 
         <form action="" method="get" class="map--container">
             <input type="text" name="buscar" id="" class="map--form" placeholder="Onde vamos?">

@@ -804,27 +804,9 @@ input[type=text].map--form::placeholder{
   box-sizing:content-box;
   display: hidden;
 }  
-#paginacadastro1{
-  display: none;
-}
-#paginacadastro2{
-  display: none;
-}
-#paginacadastro3{
-display: none;
-}
-#paginacadastro4{
-  display: none;
-  }
-.form__genero_div{
-  display: none;
-}
-#load{
-  display: none;
-}
-#home{
-  display: none;
-}
-#map{
-  display: none;
+
+.map--join__icon{
+  z-index: 5;
+  position: absolute;
+  bottom:163px;
 }
