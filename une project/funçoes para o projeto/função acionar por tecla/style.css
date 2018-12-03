@@ -1,0 +1,30 @@
+.paginacadastro1{
+    background-color: black;
+    flex-direction: column;
+}
+.paginacadastro2{
+background-color: blue;
+display: none;
+flex-direction: column;
+}
+.paginacadastro3{
+    background-color: yellow;
+    display: none;
+    flex-direction: column;
+}
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rodape > span{
+    margin: 2vw;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+}
+.rodape > .scroll1{
+    height: 25px;
+    width: 25px;
+}
